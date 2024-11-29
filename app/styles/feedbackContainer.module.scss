@@ -1,0 +1,75 @@
+.feedbackContainer {
+  background-color: var(--grey-color);
+  padding: 1.5rem;
+  margin-top: 4rem;
+  border-radius: 0.75rem;
+}
+
+.inlineContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.feedbackText {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.feedbackButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+  padding: 8px 16px;
+  border-radius: 0.5rem;
+  border: 1px solid var(--link-color);
+  background-color: var(--white-color);
+  color: var(--link-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--noto-sans), sans-serif;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.feedbackButton:hover {
+  background-color: var(--link-color);
+  color: var(--white-color);
+}
+
+.feedbackButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contactUsLink {
+  color: var(--link-color);
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.contactUsLink:hover {
+  text-decoration: none;
+}
+
+.feedbackMessage {
+  margin-top: 16px;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .inlineContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feedbackButton {
+    width: auto;
+  }
+}

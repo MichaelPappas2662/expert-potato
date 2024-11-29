@@ -1,0 +1,28 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  padding: 2rem;
+  text-align: center;
+
+  h1, h2 {
+    color: #6559FF;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    padding: 0.75rem 1.5rem;
+    background-color: #6559FF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

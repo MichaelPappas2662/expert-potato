@@ -1,0 +1,77 @@
+.helpContainer {
+  border-color: var(--link-color);
+  padding: 16px;
+  margin-top: 4rem;
+  border-radius: 0.75rem;
+  border-style: solid;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.06);
+}
+
+.helpTitle {
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.helpButton,
+.communityButton {
+  flex: 1;
+  font-size: 0.768rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  min-width: 100px;
+  padding: 0.75rem 1rem;
+ 
+  cursor: pointer;
+}
+
+.helpButton {
+  border: none;
+  background-color: var(--link-color);
+  color: var(--white-color);
+  transition: background-color 0.2s;
+}
+
+.helpButton:hover {
+  background-color: var(--white-color);
+  color: var(--link-color);
+  border: 0.1rem solid var(--link-color);
+}
+
+.communityButton {
+  border: none;
+  background-color: var(--white-color);
+  color: var(--link-color);
+}
+
+.communityButton:hover {
+  background-color: var(--link-color);
+  color: var(--white-color);
+}
+
+.helpButton .icon,
+.communityButton .icon {
+  margin-right: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .helpButton,
+  .communityButton {
+    min-width: unset;
+    width: 100%;
+  }
+}

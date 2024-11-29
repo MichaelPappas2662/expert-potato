@@ -1,0 +1,291 @@
+/* Main Layout */
+.articleContainer {
+  max-width: 1248px; 
+  margin: 0 auto; 
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 900px) 300px;
+  gap: 48px;
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+  }
+}
+
+.mainContent {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+  padding-top: .75rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-family: var(--noto-sans), sans-serif;
+  color: var(--paragraph-color);
+
+  .breadcrumbItem {
+    display: flex;
+    align-items: center;
+    margin-right: 0.2rem;
+    font-weight: 100;
+    font-size: .75rem;
+    color: gray;
+
+    a {
+      margin-right: 0.2rem;
+      color: var(--paragraph-color);
+    }
+
+    span {
+      color: black;
+    }
+  }
+
+  .house {
+    margin-right: 0.4rem;
+  }
+
+  .lastTittle {
+    font-weight: 800;
+  }
+}
+
+/* Actions Section */
+.actionsContainer {
+  display: flex;
+  gap: 10px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 0;
+
+  button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 2px solid var(--link-color);
+    border-radius: 1.5rem;
+    box-shadow: -3px 0 2px -1px var(--link-color);
+  }
+}
+
+/* Article Header */
+.header {
+  margin-bottom: 40px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid gray;
+
+  h1 {
+    font-size: 3.8125rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+}
+
+/* Main Content Sections */
+.section {
+  margin-bottom: 40px;
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+}
+
+.paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.1rem;
+}
+
+.list {
+  font-size: 16px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+
+  li {
+    margin-bottom: 8px;
+  }
+}
+
+/* Image Handling */
+.imageContainer {
+  margin-bottom: 16px;
+
+  .articleImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .imageCaption {
+    font-size: 14px;
+    color: var(--paragraph-color);
+    margin-top: 8px;
+  }
+}
+
+/* Tabs Section */
+.tabsSection {
+  border-top: 1px solid var(--border-color);
+
+  .actionTitle {
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+}
+
+.link {
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 24px;
+  border-bottom: 0.3rem solid lightgray;
+}
+
+.tabButton {
+  background-color: transparent;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: background-color 0.3s, color 0.3s;
+
+  &.active {
+    background-color: var(--purple-color);
+    color: var(--link-color);
+    border-bottom: 1px solid gray;
+  }
+
+  &:hover {
+    background-color: var(--grey-color);
+    border-bottom: 1px solid gray;
+  }
+}
+
+.tabContent {
+  font-size: 16px;
+}
+
+/* Aside Navigation */
+.aside {
+  position: sticky;
+  top: 36px;
+  height: fit-content;
+  padding: 16px;
+  margin-top: 2.5rem;
+  border-radius: 8px;
+  background-color: var(--white-color);
+
+  h2 {
+    font-size: 1.25rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--text-color);
+    margin-bottom: 16px;
+  }
+
+  .asideNav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      text-align: left;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 14px;
+      line-height: 1.1;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.requirementsBox {
+  margin: 32px 0;
+  padding: 1rem 1.5rem;
+  border: 0.0625rem solid #d0d7e1;
+  border-radius: 1rem;
+  background-color: var(--white-color);
+
+  h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: var(--poppins), sans-serif;
+    color: var(--text-color);
+    margin-bottom: 16px;
+  }
+
+  .planRequirement {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.doneButton {
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .header {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tabsSection {
+    overflow-x: auto;
+  }
+
+  .tabs {
+    min-width: max-content;
+  }
+}

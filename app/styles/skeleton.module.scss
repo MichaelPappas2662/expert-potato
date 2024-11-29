@@ -1,0 +1,29 @@
+.skeletonContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .breadcrumb {
+    height: 20px;
+    width: 60%;
+    background: #F3F6FB;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+  }
+
+  .title {
+    height: 40px;
+    width: 80%;
+    background: #F3F6FB;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+
+  .description {
+    height: 20px;
+    width: 70%;
+    background: #F3F6FB;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+  }
+}
