@@ -17,6 +17,12 @@ type Props = {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
+export async function generateStaticParams() {
+  const slug = articleData.pageProps.items.slug;
+
+  return [{ slug }];
+}
+
 export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
@@ -24,7 +30,7 @@ export async function generateMetadata(
   const slug = (await params).slug;
   const article = await getArticleData(slug);
 
-  if (!article) return { title: 'Article Not Found' };
+  if (!article) return { title: "Article Not Found" };
 
   const previousImages = (await parent).openGraph?.images || [];
 
@@ -34,7 +40,7 @@ export async function generateMetadata(
     openGraph: {
       title: article.pageProps.items.title,
       description: article.pageProps.items.description,
-      type: 'article',
+      type: "article",
       images: previousImages,
     },
   };
@@ -48,7 +54,7 @@ async function getArticleData(slug: string): Promise<Article | null> {
 
     return null;
   } catch (error) {
-    console.error('Error retrieving article:', error);
+    console.error("Error retrieving article:", error);
     return null;
   }
 }
